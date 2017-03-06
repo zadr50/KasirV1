@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/back"
+    android:gravity="center|fill"
+    android:orientation="vertical"
+    android:padding="10dp"
+    android:scrollIndicators="start|end"
+    android:weightSum="1">
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="120dp"
+        android:clipToPadding="false"
+        android:fillViewport="false"
+        android:fitsSystemWindows="false"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="5"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/btnNewOrder"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="3dp"
+                    android:layout_weight="1.86"
+                    android:background="@android:drawable/screen_background_dark_transparent"
+                    android:drawableTop="@android:drawable/ic_dialog_email"
+                    android:elevation="2dp"
+                    android:gravity="center|fill"
+                    android:padding="5dp"
+                    android:singleLine="false"
+                    android:text="New Order"
+                    android:textAlignment="center"
+                    android:textAllCaps="false"
+                    android:textColor="@android:color/white"
+                    android:textSize="18sp" />
+
+                <Button
+                    android:id="@+id/btnPendingOrder"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_column="1"
+                    android:layout_margin="3dp"
+                    android:layout_rowSpan="6"
+                    android:layout_weight="1"
+                    android:background="@android:drawable/screen_background_dark_transparent"
+                    android:drawableTop="@android:drawable/ic_media_pause"
+                    android:elevation="2dp"
+                    android:gravity="center|fill"
+                    android:padding="5dp"
+                    android:singleLine="false"
+                    android:text="Pending Order"
+                    android:textAlignment="center"
+                    android:textAllCaps="false"
+                    android:textColor="@android:color/white"
+                    android:textSize="18sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="5"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btnItemMaster"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_column="1"
+                    android:layout_margin="3dp"
+                    android:layout_rowSpan="6"
+                    android:layout_weight="1"
+                    android:background="@android:drawable/screen_background_dark_transparent"
+                    android:drawableTop="@android:drawable/ic_menu_crop"
+                    android:elevation="2dp"
+                    android:gravity="center|fill"
+                    android:padding="5dp"
+                    android:singleLine="false"
+                    android:text="Item Master"
+                    android:textAlignment="center"
+                    android:textAllCaps="false"
+                    android:textColor="@android:color/white"
+                    android:textSize="18sp" />
+
+                <Button
+                    android:id="@+id/btnCategory"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="3dp"
+                    android:layout_weight="1"
+                    android:background="@android:drawable/screen_background_dark_transparent"
+                    android:drawableTintMode="src_over"
+                    android:drawableTop="@android:drawable/ic_menu_my_calendar"
+                    android:elegantTextHeight="false"
+                    android:elevation="2dp"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:singleLine="false"
+                    android:text="Category"
+                    android:textAlignment="center"
+                    android:textAllCaps="false"
+                    android:textColor="@android:color/white"
+                    android:textSize="24sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="82dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btnCustomer"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="3dp"
+                    android:layout_weight="1"
+                    android:background="@android:drawable/screen_background_dark_transparent"
+                    android:drawableTintMode="src_over"
+                    android:drawableTop="@android:drawable/ic_menu_my_calendar"
+                    android:elegantTextHeight="false"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:singleLine="false"
+                    android:text="Customers"
+                    android:textAlignment="center"
+                    android:textAllCaps="false"
+                    android:textColor="@android:color/white"
+                    android:textSize="18sp" />
+
+                <Button
+                    android:id="@+id/btnSupplier"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="3dp"
+                    android:layout_weight="1"
+                    android:background="@android:drawable/screen_background_dark_transparent"
+                    android:drawableTop="@android:drawable/ic_menu_mapmode"
+                    android:elegantTextHeight="false"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:singleLine="false"
+                    android:text="Suppliers"
+                    android:textAlignment="center"
+                    android:textAllCaps="false"
+                    android:textColor="@android:color/white"
+                    android:textSize="24sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="4"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btnTable"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="3dp"
+                    android:layout_weight="1"
+                    android:background="@android:drawable/screen_background_dark_transparent"
+                    android:drawableTintMode="src_over"
+                    android:drawableTop="@android:drawable/ic_menu_rotate"
+                    android:elegantTextHeight="false"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:singleLine="false"
+                    android:text="Tables"
+                    android:textAlignment="center"
+                    android:textAllCaps="false"
+                    android:textColor="@android:color/white"
+                    android:textSize="24sp" />
+
+                <Button
+                    android:id="@+id/btnWaiters"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="3dp"
+                    android:layout_weight="1"
+                    android:background="@android:drawable/screen_background_dark_transparent"
+                    android:drawableTintMode="src_over"
+                    android:drawableTop="@android:drawable/ic_menu_myplaces"
+                    android:elegantTextHeight="false"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:singleLine="false"
+                    android:text="Waiters"
+                    android:textAlignment="center"
+                    android:textAllCaps="false"
+                    android:textColor="@android:color/white"
+                    android:textSize="24sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btnSetting"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="3dp"
+                    android:layout_weight="1"
+                    android:background="@android:drawable/screen_background_dark_transparent"
+                    android:drawableTop="@android:drawable/ic_menu_preferences"
+                    android:ellipsize="middle"
+                    android:padding="5dp"
+                    android:singleLine="false"
+                    android:text="@string/menu_utama_setting"
+                    android:textAlignment="center"
+                    android:textAllCaps="false"
+                    android:textColor="@android:color/white"
+                    android:textSize="24sp" />
+
+                <Button
+                    android:id="@+id/btnHelp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="3dp"
+                    android:layout_weight="1"
+                    android:background="@android:drawable/screen_background_dark_transparent"
+                    android:clickable="false"
+                    android:drawableTop="@android:drawable/ic_menu_help"
+                    android:ellipsize="middle"
+                    android:padding="5dp"
+                    android:singleLine="false"
+                    android:text="@string/menu_utama_help"
+                    android:textAlignment="center"
+                    android:textAllCaps="false"
+                    android:textColor="@android:color/white"
+                    android:textSize="30sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btnReports"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_column="1"
+                    android:layout_margin="3dp"
+                    android:layout_row="9"
+                    android:layout_weight="1"
+                    android:background="@android:drawable/screen_background_dark_transparent"
+                    android:drawableTop="@android:drawable/ic_menu_gallery"
+                    android:ellipsize="middle"
+                    android:padding="5dp"
+                    android:singleLine="false"
+                    android:text="@string/menu_utama_reports"
+                    android:textAlignment="center"
+                    android:textAllCaps="false"
+                    android:textColor="@android:color/white"
+                    android:textSize="24sp" />
+
+                <Button
+                    android:id="@+id/btnExit"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_columnSpan="2"
+                    android:layout_margin="3dp"
+                    android:layout_weight="1"
+                    android:background="@android:drawable/screen_background_dark_transparent"
+                    android:drawableTop="@android:drawable/ic_delete"
+                    android:ellipsize="middle"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:padding="5dp"
+                    android:singleLine="false"
+                    android:text="@string/menu_utama_exit"
+                    android:textAlignment="center"
+                    android:textAllCaps="false"
+                    android:textColor="@android:color/white"
+                    android:textSize="24sp" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

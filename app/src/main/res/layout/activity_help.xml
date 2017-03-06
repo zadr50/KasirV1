@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.talagasoft.kasir.Help"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="66dp"
+        android:layout_marginBottom="30dp"
+        android:gravity="center_vertical"
+        android:background="@color/colorPrimaryDark">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="52dp"
+                android:layout_height="match_parent"
+                app:srcCompat="@android:drawable/ic_menu_help"
+                android:id="@+id/imageView" />
+
+            <TextView
+                android:text="Online Help"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView22"
+                android:textSize="36sp"
+                android:layout_weight="1"
+                android:textColor="@android:color/background_light" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/help"
+            android:id="@+id/help_text"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentBottom="true"
+            android:padding="20dp" />
+    </LinearLayout>
+</LinearLayout>
