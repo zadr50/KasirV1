@@ -4,6 +4,7 @@ import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteException;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.util.Log;
 
 import static com.talagasoft.model.Global.NAMA_DB;
 import static com.talagasoft.model.Global.VERSI_DB;
@@ -28,6 +29,7 @@ public class Helper extends SQLiteOpenHelper {
         }
     }
     public void Execute(String sql){
+        Log.d("Sql:",sql);
         this.db.execSQL(sql);
     }
 
@@ -123,7 +125,8 @@ public class Helper extends SQLiteOpenHelper {
             this.db.execSQL(sql);
             sql="create table ksr_sales_payment ( " +
                     "id integer primary key, invoice_no text not null, date_paid datetime, " +
-                    "how_paid text, amount double, comments text)";
+                    "how_paid text, amount double, comments text, card_no text, card_name text, " +
+                    "edc_no text)";
             this.db.execSQL(sql);
         }
         catch (SQLiteException e) {
@@ -133,24 +136,9 @@ public class Helper extends SQLiteOpenHelper {
     @Override
     public void onUpgrade(SQLiteDatabase db, int versiLama,
                           int versiBaru) {
-        db.execSQL("drop tabel if exists ksr_item_master");
-        onCreate(db);
-        db.execSQL("drop tabel if exists ksr_category");
-        onCreate(db);
-        db.execSQL("drop tabel if exists ksr_customers");
-        onCreate(db);
-        db.execSQL("drop tabel if exists ksr_suppliers");
-        onCreate(db);
-        db.execSQL("drop tabel if exists ksr_sales_header");
-        onCreate(db);
-        db.execSQL("drop tabel if exists ksr_sales_detail");
-        onCreate(db);
-        db.execSQL("drop tabel if exists ksr_tables");
-        onCreate(db);
-        db.execSQL("drop tabel if exists ksr_waiters");
-        onCreate(db);
-        db.execSQL("drop tabel if exists ksr_sales_payment");
-        onCreate(db);
-
+        String sql="";
+        try {
+        }catch (SQLiteException e){
+        }
     }
 }

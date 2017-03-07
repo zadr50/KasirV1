@@ -68,7 +68,7 @@ public class Sales extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent i = new Intent();
-                i.setAction("com.talagasoft.kasir.PayCard");
+                i.setAction("com.talagasoft.model.SalesPaymentCard");
                 startActivityForResult(i,CARD_PAYMENT);
             }
         });
@@ -111,7 +111,6 @@ public class Sales extends AppCompatActivity {
         txtQty = (TextView) findViewById(R.id.txtQty);
         txtNota = (TextView) findViewById(R.id.txtNotaNo);
         txtNota.setText(mNota);
-
         //load item sales
         loadItemSale();
         calcTotal();
@@ -148,6 +147,12 @@ public class Sales extends AppCompatActivity {
             addItem(sItemNo);
         }
         if(requestCode==CASH_PAYMENT){
+            String status=data.getStringExtra(STATUS);
+            if(status.equals(OK)){
+                finish();
+            }
+        }
+        if(requestCode==CARD_PAYMENT){
             String status=data.getStringExtra(STATUS);
             if(status.equals(OK)){
                 finish();

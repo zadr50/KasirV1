@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical" android:layout_width="fill_parent"
-    android:layout_height="fill_parent">
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/back"
+    android:orientation="vertical">
 
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="100dp"
-        android:layout_marginBottom="10dp"
         android:background="@color/colorPrimary"
         android:orientation="horizontal">
 
@@ -45,108 +46,112 @@
     </LinearLayout>
 
     <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/scrollView2" >
-    <LinearLayout
-        android:orientation="vertical"
+        android:id="@+id/scrollView2"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp">
+        android:layout_margin="10dp"
+        android:layout_weight="1">
 
-        <EditText
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/txtBarcode"
-            android:ems="10"
-            android:hint="Item Number"
-            android:inputType="textPersonName"/>
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:orientation="vertical">
 
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/txtItemName"
-            android:ems="10"
-            android:hint="Item Name / Description"
-            android:inputType="textPersonName"/>
+            <EditText
+                android:id="@+id/txtBarcode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Item Number"
+                android:inputType="textPersonName" />
 
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/txtUnit"
-            android:ems="10"
-            android:hint="Unit Of Measure"
-            android:inputType="textPersonName"/>
+            <EditText
+                android:id="@+id/txtItemName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Item Name / Description"
+                android:inputType="textPersonName" />
 
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="numberDecimal"
-            android:id="@+id/txtSales"
-            android:hint="Sales Price"/>
+            <EditText
+                android:id="@+id/txtUnit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Unit Of Measure"
+                android:inputType="textPersonName" />
 
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="numberDecimal"
-            android:ems="10"
-            android:id="@+id/txtPurchase"
-            android:hint = "Purchase Price"/>
+            <EditText
+                android:id="@+id/txtSales"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Sales Price"
+                android:inputType="numberDecimal" />
 
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/txtCategory"
-            android:ems="10"
-            android:hint="Category"
-            android:inputType="textPersonName"/>
+            <EditText
+                android:id="@+id/txtPurchase"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Purchase Price"
+                android:inputType="numberDecimal" />
 
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/txtSupplier"
-            android:ems="10"
-            android:hint="Supplier"
-            android:inputType="textPersonName"/>
+            <EditText
+                android:id="@+id/txtCategory"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Category"
+                android:inputType="textPersonName" />
 
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/txtIcon"
-            android:ems="10"
-            android:hint="Picure Item"
-            android:inputType="textPersonName"/>
+            <EditText
+                android:id="@+id/txtSupplier"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Supplier"
+                android:inputType="textPersonName" />
+
+            <EditText
+                android:id="@+id/txtIcon"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Picure Item"
+                android:inputType="textPersonName" />
 
 
-    </LinearLayout>
+        </LinearLayout>
     </ScrollView>
 
     <LinearLayout
-        android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
         android:gravity="center_horizontal"
-        android:background="@color/colorPrimary">
+        android:orientation="horizontal">
 
 
         <Button
+            android:id="@+id/cmdDelete"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Delete"
-            android:id="@+id/cmdDelete"
             android:visibility="visible" />
 
         <Button
+            android:id="@+id/cmdClose"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Close"
-            android:id="@+id/cmdClose" />
+            android:text="Close" />
+
         <Button
+            android:id="@+id/cmdSave"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Save"
-            android:id="@+id/cmdSave" />
+            android:text="Save" />
 
     </LinearLayout>
 

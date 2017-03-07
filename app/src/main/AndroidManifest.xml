@@ -149,6 +149,12 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
+        <activity android:name="com.talagasoft.model.SalesPaymentCard">
+            <intent-filter>
+                <action android:name="com.talagasoft.model.SalesPaymentCard" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>
